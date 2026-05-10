@@ -11,9 +11,12 @@ const app = express();
 // middleware
 app.use(cors({
   origin: [
-    "http://localhost:5173",
-    "https://family-cricket.vercel.app",
-  ],
+      "http://localhost:5173",
+
+      "https://family-cricket-6ryeu2f3-aasutosh-baraiyas-projects.vercel.app",
+
+      "https://family-cricket.vercel.app",
+    ],
   credentials: true,
 }));
 app.use(express.json());
