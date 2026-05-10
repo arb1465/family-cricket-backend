@@ -9,7 +9,13 @@ import paymentRoutes from "./routes/paymentRoutes.js";
 const app = express();
 
 // middleware
-app.use(cors());
+app.use(cors({
+  origin: [
+    "http://localhost:5173",
+    "https://family-cricket.vercel.app",
+  ],
+  credentials: true,
+}));
 app.use(express.json());
 
 app.use("/api/matches", matchRoutes);
