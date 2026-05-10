@@ -1,15 +1,19 @@
 import express from "express";
+
 import {
   addPayment,
-  getPaymentsByMatch,
+  getPaymentsByDate,
 } from "../controllers/paymentController.js";
 
 const router = express.Router();
 
-// ✅ add payment
-router.post("/:matchId/payment", addPayment);
+// ✅ ADD PAYMENT
+router.post("/", addPayment);
 
-// ✅ get payments
-router.get("/:matchId/payment", getPaymentsByMatch);
+// ✅ GET PAYMENTS BY DATE
+router.get(
+  "/date/:date",
+  getPaymentsByDate
+);
 
 export default router;

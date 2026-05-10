@@ -15,7 +15,7 @@ app.use(express.json());
 app.use("/api/matches", matchRoutes);
 app.use("/api/players", playerRoutes);
 app.use("/api", scoringRoutes);
-app.use("/api", paymentRoutes);
+app.use("/api/payments", paymentRoutes);
 
 // test route
 app.get("/", (req, res) => {

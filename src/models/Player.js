@@ -17,15 +17,10 @@ const playerSchema = new mongoose.Schema(
       wickets: { type: Number, default: 0 },
     },
 
-    payments: [
-      {
-        matchId: {
-          type: mongoose.Schema.Types.ObjectId,
-          ref: "Match",
-        },
-        amount: Number,
-      },
-    ],
+    payments: [{
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Payment",
+    }]
   },
   { timestamps: true }
 );
